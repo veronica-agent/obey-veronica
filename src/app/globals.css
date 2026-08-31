@@ -94,9 +94,10 @@ button:focus-visible {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 18px;
+  height: 12px;
+  overflow: hidden;
   border-bottom: 1px solid var(--line);
-  color: color-mix(in srgb, var(--crt) 80%, transparent);
+  color: color-mix(in srgb, var(--crt) 72%, transparent);
 }
 
 .mark {
@@ -144,8 +145,9 @@ button:focus-visible {
 }
 
 .header-wave {
-  width: min(28rem, 55%);
-  height: 16px;
+  width: min(22rem, 62%);
+  height: 8px;
+  max-height: 8px;
 }
 
 .hero {
@@ -188,6 +190,10 @@ h3 {
 
 .thesis p {
   margin: 0 0 0.35rem;
+}
+
+.thesis-phrase {
+  display: inline;
 }
 
 .cta-row {
@@ -323,10 +329,12 @@ section {
 }
 
 .mini-wave {
-  width: 72px;
-  height: 16px;
-  flex: 0 0 72px;
-  color: var(--mute);
+  width: 84px;
+  height: 12px;
+  max-height: 12px;
+  flex: 0 0 84px;
+  overflow: hidden;
+  color: color-mix(in srgb, var(--crt) 55%, var(--mute));
 }
 
 .posts {
@@ -415,6 +423,14 @@ section {
   animation: voice 1.8s ease-in-out infinite;
 }
 
+.wave-chrome rect {
+  animation-name: voice-chrome;
+}
+
+.wave-mini rect {
+  animation-name: voice-mini;
+}
+
 .wave-hot rect {
   animation-duration: 0.9s;
 }
@@ -426,6 +442,26 @@ section {
   }
   50% {
     transform: scaleY(1);
+  }
+}
+
+@keyframes voice-chrome {
+  0%,
+  100% {
+    transform: scaleY(0.55);
+  }
+  50% {
+    transform: scaleY(0.95);
+  }
+}
+
+@keyframes voice-mini {
+  0%,
+  100% {
+    transform: scaleY(0.5);
+  }
+  50% {
+    transform: scaleY(0.92);
   }
 }
 
@@ -448,6 +484,8 @@ section {
 
   .lamp-bloom,
   .wave rect,
+  .wave-chrome rect,
+  .wave-mini rect,
   .card {
     animation: none;
     transition: none;
@@ -462,17 +500,70 @@ section {
   }
 
   .header-row {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    gap: 0.65rem;
+    padding: 0.9rem 0 0.55rem;
+  }
+
+  .mark {
+    gap: 0.55rem;
+    min-width: 0;
+  }
+
+  .mark img {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+  }
+
+  .mark-name {
+    font-size: 0.95rem;
+  }
+
+  .mark-sub {
+    font-size: 0.6rem;
+    letter-spacing: 0.05em;
   }
 
   .nav {
-    width: 100%;
-    justify-content: flex-start;
-    gap: 1rem;
-    font-size: 0.7rem;
+    width: auto;
+    flex-shrink: 0;
+    justify-content: flex-end;
+    gap: 0.55rem;
+    font-size: 0.64rem;
+    letter-spacing: 0.05em;
+  }
+
+  .header-wave-wrap {
+    height: 10px;
+  }
+
+  .header-wave {
+    width: min(18rem, 72%);
+    height: 7px;
+    max-height: 7px;
+  }
+
+  .thesis {
+    font-size: 1.08rem;
   }
 
   .site-footer {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 420px) {
+  .shell {
+    width: min(1120px, calc(100% - 1.35rem));
+  }
+
+  .mark-sub {
+    display: none;
+  }
+
+  .nav {
+    gap: 0.42rem;
+    font-size: 0.58rem;
   }
 }
