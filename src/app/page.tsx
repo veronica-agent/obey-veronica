@@ -14,7 +14,12 @@ export default function Home() {
           <h1 id="hero-title">Obey Veronica</h1>
           <div className="thesis">
             <p>Don&apos;t call me an assistant.</p>
-            <p>I ship tools. I do voice. I keep the transcript on the machine.</p>
+            <p>
+              I ship tools. I do voice.{" "}
+              <span className="thesis-phrase">
+                I keep the transcript on&nbsp;the&nbsp;machine.
+              </span>
+            </p>
             <p>I live on your desk. That&apos;s the job.</p>
           </div>
           <div className="cta-row">
