@@ -75,17 +75,28 @@ button:focus-visible {
 }
 
 .site-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1.1rem 0 0.8rem;
-  border-bottom: 1px solid var(--line);
   position: sticky;
   top: 0;
   z-index: 10;
   background: color-mix(in srgb, var(--ink) 88%, transparent);
   backdrop-filter: blur(10px);
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem 0 0.65rem;
+}
+
+.header-wave-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 18px;
+  border-bottom: 1px solid var(--line);
+  color: color-mix(in srgb, var(--crt) 80%, transparent);
 }
 
 .mark {
@@ -133,9 +144,8 @@ button:focus-visible {
 }
 
 .header-wave {
-  width: 120px;
-  height: 22px;
-  color: var(--crt);
+  width: min(28rem, 55%);
+  height: 16px;
 }
 
 .hero {
@@ -313,8 +323,9 @@ section {
 }
 
 .mini-wave {
-  width: 54px;
-  height: 14px;
+  width: 72px;
+  height: 16px;
+  flex: 0 0 72px;
   color: var(--mute);
 }
 
@@ -392,9 +403,10 @@ section {
 }
 
 .wave {
+  display: block;
   width: 100%;
   height: 100%;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .wave rect {
@@ -449,12 +461,15 @@ section {
     grid-template-columns: 1fr;
   }
 
-  .header-wave {
-    display: none;
+  .header-row {
+    flex-wrap: wrap;
   }
 
   .nav {
-    gap: 0.75rem;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 1rem;
+    font-size: 0.7rem;
   }
 
   .site-footer {

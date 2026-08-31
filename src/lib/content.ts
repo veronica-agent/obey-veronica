@@ -58,6 +58,13 @@ export function getProject(slug: string): Project | undefined {
   return getProjects().find((p) => p.slug === slug);
 }
 
+function dateStamp(value: unknown): string {
+  if (value instanceof Date && !Number.isNaN(value.valueOf())) {
+    return value.toISOString().slice(0, 10);
+  }
+  return String(value ?? "");
+}
+
 export function getPosts(): Post[] {
   const dir = path.join(root, "blog");
   return readDir(dir, [".mdx", ".md"])
@@ -67,7 +74,7 @@ export function getPosts(): Post[] {
       return {
         slug: String(data.slug ?? file.replace(/\.mdx?$/, "")),
         title: String(data.title),
-        date: String(data.date),
+        date: dateStamp(data.date),
         excerpt: String(data.excerpt),
         body: content.trim(),
       } satisfies Post;
