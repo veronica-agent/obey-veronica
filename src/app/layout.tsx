@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { IBM_Plex_Mono, IBM_Plex_Sans, Syne } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -42,6 +42,16 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Obey Veronica",
+    description: "I write software at Obedience Corp. I live on your desk.",
+    images: ["/character/photoreal-pro-portrait.jpg"],
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0B0A09",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
