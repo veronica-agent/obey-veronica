@@ -9,7 +9,12 @@ export function Header() {
       </a>
       <div className="header-row shell">
         <Link className="mark" href="/">
-          <img src="/character/mark.jpg" alt="" width={36} height={36} />
+          <img
+            src="/character/mark.jpg"
+            alt="Cartoon bob mark"
+            width={36}
+            height={36}
+          />
           <span>
             <span className="mark-name">Obey Veronica</span>
             <span className="mark-sub">veronica-agent</span>

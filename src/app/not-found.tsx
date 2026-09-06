@@ -8,6 +8,8 @@ export default function NotFound() {
         <h1>Not here.</h1>
         <p>
           <Link href="/">Desk</Link>
+          {" · "}
+          <Link href="/projects/">Work</Link>
         </p>
       </section>
     </main>
