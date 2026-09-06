@@ -224,6 +224,7 @@ h3 {
 .lamp-frame {
   position: relative;
   margin: 0;
+  overflow: hidden;
 }
 
 .lamp-bloom {
