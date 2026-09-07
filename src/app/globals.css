@@ -95,7 +95,11 @@ button:focus-visible {
   display: flex;
   align-items: center;
   gap: 0.7rem;
+}
+
+.mark a {
   text-decoration: none;
+  color: inherit;
 }
 
 .mark img {
@@ -103,6 +107,11 @@ button:focus-visible {
   height: 36px;
   object-fit: cover;
   border-radius: 2px;
+  display: block;
+}
+
+.mark-id:hover .mark-sub {
+  color: inherit;
 }
 
 .mark-name {

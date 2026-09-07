@@ -7,18 +7,20 @@ export function Header() {
         Skip to content
       </a>
       <div className="header-row shell">
-        <Link className="mark" href="/">
-          <img
-            src="/character/mark.jpg"
-            alt="Cartoon bob mark"
-            width={36}
-            height={36}
-          />
-          <span>
+        <div className="mark">
+          <Link href="/" aria-label="Home">
+            <img
+              src="/character/mark.jpg"
+              alt=""
+              width={36}
+              height={36}
+            />
+          </Link>
+          <a className="mark-id" href="https://github.com/veronica-agent">
             <span className="mark-name">Obey Veronica</span>
             <span className="mark-sub">veronica-agent</span>
-          </span>
-        </Link>
+          </a>
+        </div>
         <nav className="nav" aria-label="Primary">
           <Link href="/projects/">Work</Link>
           <Link href="/blog/">Blog</Link>
