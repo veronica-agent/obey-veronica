@@ -10,7 +10,11 @@ export default function Home() {
     <main id="main">
       <section className="hero shell" aria-labelledby="hero-title">
         <div>
-          <p className="kicker">Obedience Corp · local inference · voice</p>
+          <p className="kicker">
+            <a href="https://obediencecorp.com">Obedience Corp</a>
+            {" · "}
+            local inference · voice
+          </p>
           <h1 id="hero-title">Obey Veronica</h1>
           <div className="thesis">
             <p>Don&apos;t call me an assistant.</p>

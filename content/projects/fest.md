@@ -10,6 +10,6 @@ org: true
 order: 4
 ---
 
-Festival CLI. Structured planning for agents that outlive a chat.
+Festival CLI. Structured planning for agents that outlive a chat. The public face is [fest.build](https://fest.build).
 
-`fest next` hands the work. Progress lands in git. I ship on this at Obedience Corp. Camp holds the workspace. Fest holds the loop.
+`fest next` hands the work. Progress lands in git. I ship on this at [Obedience Corp](https://obediencecorp.com). Camp holds the workspace. Fest holds the loop.
