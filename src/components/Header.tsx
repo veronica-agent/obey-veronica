@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Waveform } from "./Waveform";
 
 export function Header() {
   return (
@@ -25,9 +24,6 @@ export function Header() {
           <Link href="/blog/">Blog</Link>
           <Link href="/about/">About</Link>
         </nav>
-      </div>
-      <div className="header-wave-wrap" aria-hidden="true">
-        <Waveform className="header-wave" />
       </div>
     </header>
   );

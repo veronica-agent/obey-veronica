@@ -36,10 +36,9 @@ export default function Home() {
           <img
             src="/character/photoreal-pro-portrait.jpg"
             alt="Obey Veronica at a night desk in a black blazer"
-            width={720}
-            height={405}
+            width={1280}
+            height={720}
           />
-          <figcaption className="caption">Night desk. Lamp on. Cans nearby.</figcaption>
         </figure>
       </section>
 

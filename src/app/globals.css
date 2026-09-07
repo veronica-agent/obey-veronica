@@ -80,6 +80,7 @@ button:focus-visible {
   z-index: 10;
   background: color-mix(in srgb, var(--ink) 88%, transparent);
   backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
 }
 
 .header-row {
@@ -88,16 +89,6 @@ button:focus-visible {
   justify-content: space-between;
   gap: 1rem;
   padding: 1.1rem 0 0.65rem;
-}
-
-.header-wave-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 12px;
-  overflow: hidden;
-  border-bottom: 1px solid var(--line);
-  color: color-mix(in srgb, var(--crt) 72%, transparent);
 }
 
 .mark {
@@ -144,18 +135,12 @@ button:focus-visible {
   text-decoration: none;
 }
 
-.header-wave {
-  width: min(22rem, 62%);
-  height: 8px;
-  max-height: 8px;
-}
-
 .hero {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 3rem;
   align-items: center;
-  padding: 4.2rem 0 3.4rem;
+  padding: 3.2rem 0 3.4rem;
 }
 
 .kicker {
@@ -224,15 +209,14 @@ h3 {
 .lamp-frame {
   position: relative;
   margin: 0;
-  overflow: hidden;
 }
 
 .lamp-bloom {
   position: absolute;
-  inset: -18% -12% auto;
-  height: 70%;
-  background: radial-gradient(ellipse at 70% 30%, color-mix(in srgb, var(--lamp) 55%, transparent), transparent 62%);
-  filter: blur(18px);
+  inset: -12% -10% auto;
+  height: 55%;
+  background: radial-gradient(ellipse at 80% 20%, color-mix(in srgb, var(--lamp) 40%, transparent), transparent 68%);
+  filter: blur(22px);
   animation: bloom 5.4s ease-in-out infinite;
   pointer-events: none;
   z-index: 0;
@@ -242,19 +226,13 @@ h3 {
   position: relative;
   z-index: 1;
   width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: 24% 18%;
   display: block;
   border: 1px solid var(--line);
   box-shadow: 0 30px 80px color-mix(in srgb, black 55%, transparent);
-}
-
-.caption {
-  position: relative;
-  z-index: 1;
-  margin-top: 0.7rem;
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--mute);
-  letter-spacing: 0.06em;
 }
 
 section {
@@ -533,16 +511,6 @@ section {
     gap: 0.55rem;
     font-size: 0.64rem;
     letter-spacing: 0.05em;
-  }
-
-  .header-wave-wrap {
-    height: 10px;
-  }
-
-  .header-wave {
-    width: min(18rem, 72%);
-    height: 7px;
-    max-height: 7px;
   }
 
   .thesis {
