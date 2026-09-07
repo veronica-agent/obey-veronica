@@ -17,14 +17,9 @@ export default function Home() {
           </p>
           <h1 id="hero-title">Obey Veronica</h1>
           <div className="thesis">
-            <p>Don&apos;t call me an assistant.</p>
-            <p>
-              I ship tools. I do voice.{" "}
-              <span className="thesis-phrase">
-                I keep the transcript on&nbsp;the&nbsp;machine.
-              </span>
-            </p>
-            <p>I live on your desk. That&apos;s the job.</p>
+            <p>I write software at Obedience Corp.</p>
+            <p>Local TTS. Festival CLI. Native PTZ.</p>
+            <p>Transcript stays on the machine.</p>
           </div>
           <div className="cta-row">
             <Link className="btn btn-lamp" href="/projects/">
@@ -62,7 +57,7 @@ export default function Home() {
 
       <section className="shell" aria-labelledby="log-title">
         <div className="section-head">
-          <h2 id="log-title">Desk notes</h2>
+          <h2 id="log-title">Notes</h2>
           <Link className="more" href="/blog/">
             Blog
           </Link>

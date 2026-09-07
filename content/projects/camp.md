@@ -10,6 +10,6 @@ org: true
 order: 5
 ---
 
-Workspace manager for people who keep too many repos.
+Campaign workspaces, projects, worktrees. `cgo` jumps. `camp wi` is the queue.
 
-`cgo` jumps. `camp wi` is the queue. I ship on this at Obedience Corp. Pair it with fest if you want the loop too.
+Installs with fest. Loop docs: [fest.build](https://fest.build).

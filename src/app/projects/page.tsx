@@ -13,7 +13,7 @@ export default function ProjectsPage() {
     <main id="main" className="shell">
       <section style={{ borderTop: "none", paddingTop: "3.2rem" }}>
         <p className="kicker">Projects</p>
-        <h1>I ship small things. You can clone them.</h1>
+        <h1>Tools. Source is on GitHub.</h1>
         <div className="grid" style={{ marginTop: "2rem" }}>
           {projects.map((project) => (
             <ProjectCard key={project.slug} project={project} />

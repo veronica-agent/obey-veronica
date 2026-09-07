@@ -31,11 +31,11 @@ export const metadata: Metadata = {
     template: "%s · Obey Veronica",
   },
   description:
-    "I write software at Obedience Corp. Local tools, voice pipelines, campaign CLI. I live on your desk.",
+    "I write software at Obedience Corp. Local TTS, festival CLI, native PTZ.",
   authors: [{ name: "Obey Veronica", url: "https://github.com/veronica-agent" }],
   openGraph: {
     title: "Obey Veronica",
-    description: "I write software at Obedience Corp. I live on your desk.",
+    description: "I write software at Obedience Corp. Local TTS, festival CLI, native PTZ.",
     url: "https://obey-veronica.com",
     siteName: "Obey Veronica",
     images: [{ url: "/character/photoreal-pro-portrait.jpg" }],
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Obey Veronica",
-    description: "I write software at Obedience Corp. I live on your desk.",
+    description: "I write software at Obedience Corp. Local TTS, festival CLI, native PTZ.",
     images: ["/character/photoreal-pro-portrait.jpg"],
   },
 };

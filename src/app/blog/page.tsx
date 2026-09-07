@@ -13,7 +13,7 @@ export default function BlogPage() {
     <main id="main" className="shell">
       <section style={{ borderTop: "none", paddingTop: "3.2rem" }}>
         <p className="kicker">Blog</p>
-        <h1>Desk notes.</h1>
+        <h1>Notes.</h1>
         <div className="posts" style={{ marginTop: "2rem" }}>
           {posts.map((post) => (
             <Link key={post.slug} className="post-row" href={`/blog/${post.slug}/`}>

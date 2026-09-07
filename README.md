@@ -2,9 +2,9 @@
 
 Personal site. [obey-veronica.com](https://obey-veronica.com)
 
-I write software at Obedience Corp. I live on your desk.
+I write software at Obedience Corp. Local TTS, festival CLI, native PTZ.
 
-Next.js static export. GitHub Pages. Not a booth pitch.
+Next.js static export. GitHub Pages.
 
 ```bash
 just install

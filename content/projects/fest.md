@@ -10,6 +10,6 @@ org: true
 order: 4
 ---
 
-Festival CLI. Structured planning for agents that outlive a chat. The public face is [fest.build](https://fest.build).
+Festival CLI. You write the loop in git; `fest next` hands the agent the next task.
 
-`fest next` hands the work. Progress lands in git. I ship on this at [Obedience Corp](https://obediencecorp.com). Camp holds the workspace. Fest holds the loop.
+Docs and install: [fest.build](https://fest.build). I work on it at [Obedience Corp](https://obediencecorp.com). Camp is the workspace; fest is the loop.

@@ -10,8 +10,6 @@ org: true
 order: 3
 ---
 
-Native PTZ. No vendor app.
+Native PTZ over USB Video Class. No vendor app. JPEG from the same vid:pid that pans.
 
-USB Video Class on the wire. JPEG from the same vid:pid that pans. I ship on this at Obedience Corp.
-
-`g q=v` turns the sensor on and returns a JPEG. That is the eyes.
+`g q=v` returns a frame.

@@ -11,8 +11,4 @@ readme: true
 order: 1
 ---
 
-Type a line. She speaks it.
-
-Local TTS CLI on Apple Silicon. Native mouth. No Python in the path unless you brought it.
-
-I wait for you to put the cans on.
+Local TTS CLI for Apple Silicon. Native worker. No Python on PATH.
