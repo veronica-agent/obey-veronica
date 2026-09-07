@@ -366,6 +366,37 @@ section {
   margin: 0.9rem 0;
 }
 
+.prose img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  margin: 1rem 0;
+}
+
+.prose th,
+.prose td {
+  text-align: left;
+  padding: 0.45rem 0.6rem;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.prose details {
+  margin: 1rem 0;
+}
+
+.prose summary {
+  cursor: pointer;
+  color: var(--hoop);
+}
+
 .prose pre,
 .install {
   font-family: var(--font-mono);

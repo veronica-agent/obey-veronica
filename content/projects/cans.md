@@ -7,6 +7,7 @@ url: https://github.com/veronica-agent/cans
 install: brew install --HEAD veronica-agent/tap/cans
 voice: true
 org: false
+readme: true
 order: 1
 ---
 

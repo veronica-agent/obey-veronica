@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getProject, getProjects } from "@/lib/content";
+import { githubLabel, loadRepoReadme } from "@/lib/readme";
 
 export function generateStaticParams() {
   return getProjects().map((project) => ({ slug: project.slug }));
@@ -31,6 +32,8 @@ export default async function ProjectPage({
   const { slug } = await params;
   const project = getProject(slug);
   if (!project) notFound();
+  const readme = project.readme ? await loadRepoReadme(project.url) : undefined;
+  const source = readme ?? project.body;
 
   return (
     <main id="main" className="shell">
@@ -39,15 +42,20 @@ export default async function ProjectPage({
           {project.org ? "Obedience Corp" : "veronica-agent"} · {project.title}
         </p>
         <h1>{project.tagline}</h1>
-        <MDXRemote source={project.body} />
-        {project.install ? (
+        <p>
+          <a href={project.url}>{githubLabel(project.url)}</a>
+        </p>
+        <MDXRemote source={source} />
+        {!readme && project.install ? (
           <pre className="install">
             <code>{project.install}</code>
           </pre>
         ) : null}
-        <p>
-          <a href={project.url}>Source on GitHub</a>
-        </p>
+        {!readme ? (
+          <p>
+            <a href={project.url}>Source on GitHub</a>
+          </p>
+        ) : null}
       </article>
     </main>
   );

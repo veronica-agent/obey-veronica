@@ -7,6 +7,7 @@ url: https://github.com/veronica-agent/link
 install: just sdk && just build && just launch
 voice: false
 org: false
+readme: true
 order: 2
 ---
 

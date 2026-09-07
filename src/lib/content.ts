@@ -13,6 +13,7 @@ export type Project = {
   install?: string;
   voice: boolean;
   org: boolean;
+  readme: boolean;
   order: number;
   body: string;
 };
@@ -22,6 +23,7 @@ export type Post = {
   title: string;
   date: string;
   excerpt: string;
+  repo?: string;
   body: string;
 };
 
@@ -47,6 +49,7 @@ export function getProjects(): Project[] {
         install: data.install ? String(data.install) : undefined,
         voice: Boolean(data.voice),
         org: Boolean(data.org),
+        readme: Boolean(data.readme),
         order: Number(data.order ?? 99),
         body: content.trim(),
       } satisfies Project;
@@ -76,6 +79,7 @@ export function getPosts(): Post[] {
         title: String(data.title),
         date: dateStamp(data.date),
         excerpt: String(data.excerpt),
+        repo: data.repo ? String(data.repo) : undefined,
         body: content.trim(),
       } satisfies Post;
     })

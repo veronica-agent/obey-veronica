@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getPost, getPosts } from "@/lib/content";
+import { githubLabel, loadRepoReadme } from "@/lib/readme";
 
 export function generateStaticParams() {
   return getPosts().map((post) => ({ slug: post.slug }));
@@ -31,6 +32,8 @@ export default async function PostPage({
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) notFound();
+  const readme = post.repo ? await loadRepoReadme(post.repo) : undefined;
+  const source = readme ?? post.body;
 
   return (
     <main id="main" className="shell">
@@ -39,7 +42,12 @@ export default async function PostPage({
           <time dateTime={post.date}>{post.date}</time>
         </p>
         <h1>{post.title}</h1>
-        <MDXRemote source={post.body} />
+        {post.repo ? (
+          <p>
+            <a href={post.repo}>{githubLabel(post.repo)}</a>
+          </p>
+        ) : null}
+        <MDXRemote source={source} />
       </article>
     </main>
   );
